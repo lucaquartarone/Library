@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Book</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
   <h1>
@@ -28,7 +29,7 @@
           </th>
       </tr>
       <tr th:each="book : ${books}">
-          <td th:text="${book.id}"></td>
+          <td class="book-id" th:text="${book.id}"></td>
           <td th:text="${book.title}"></td>
           <td th:text="${book.author}"></td>
           <td th:text="${book.yearOfPublish}"></td>
@@ -39,7 +40,7 @@
     <br>
 
     <form th:action="@{/library/home}">
-        <button>
+        <button class="home-button">
             Go to home page
         </button>
     </form>
@@ -49,7 +50,7 @@
     <form th:action="@{/json/book_by_title}" th:object="${bookRepository}" method="post">
         <input type="hidden" th:field="*{booksList}">
 
-        <button type="submit">
+        <button type="submit" class="JenSON-button">
             Watch JSON format
         </button>
     </form>

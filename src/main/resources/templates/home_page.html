@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1>
         Home Page
     </h1>
 
-    <button>
-        <a th:href="@{/user/detail}">
+    <button class="detail-user-button">
+        <a class="detail-user" th:href="@{/user/detail}">
             My account
         </a>
     </button>
@@ -22,7 +23,7 @@
     </h2>
 
     <form th:action="@{/books/new_book}">
-        <button>
+        <button class="add-button">
             Add new book
         </button>
     </form>
@@ -48,21 +49,21 @@
             </th>
         </tr>
         <tr th:each="book : ${books}">
-            <td th:text="${book.id}"></td>
+            <td class="book-id" th:text="${book.id}"></td>
             <td th:text="${book.title}"></td>
             <td th:text="${book.author}"></td>
             <td th:text="${book.yearOfPublish}"></td>
             <td th:text="${book.price} + ' €'"></td>
             <td>
-                <button>
-                    <a th:href="@{'/books/detail/' + ${book.id}}">
+                <button class="detail-book-button">
+                    <a class="detail-book" th:href="@{'/books/detail/' + ${book.id}}">
                         Book detail
                     </a>
                 </button>
             </td>
             <td>
-                <button>
-                    <a th:href="@{'/books/delete/' + ${book.id}}">
+                <button class="delete-button">
+                    <a class="delete-book" th:href="@{'/books/delete/' + ${book.id}}">
                         Delete book
                     </a>
                 </button>
@@ -73,7 +74,7 @@
     <br>
 
     <form th:action="@{/json/all_books}">
-        <button>
+        <button class="JenSON-button">
             Watch books in JSON format
         </button>
     </form>
@@ -87,7 +88,7 @@
     <br>
 
     <form th:action="@{/books/find_book}">
-        <button>
+        <button class="search-button">
             Search a book
         </button>
     </form>

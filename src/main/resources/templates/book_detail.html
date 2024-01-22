@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Book detail</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1 th:text="${book.title}"></h1>
@@ -11,7 +12,7 @@
     <p th:text="'Price: ' + ${book.price} + ' €'"></p>
     <p th:text="'ID: ' + ${book.id}"></p>
 
-    <button onclick="history.back()">
+    <button onclick="history.back()" class="back-button">
         Go back
     </button>
 </body>

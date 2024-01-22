@@ -1,0 +1,121 @@
+body {
+    font-family: Calibri;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Calibri;
+}
+
+button {
+    font-family: Calibri;
+}
+
+h1 {
+    color: cornflowerblue;
+}
+
+h2 {
+    color: cadetblue;
+}
+
+h3 {
+    color: darkcyan;
+}
+
+td {
+    color: dimgrey;
+    font-family: Calibri;
+}
+
+th {
+    font-family: Calibri;
+}
+
+.book-id {
+    color: crimson;
+}
+
+.delete-button {
+    background-color: orangered;
+}
+
+.delete-book {
+    color: aliceblue;
+}
+
+.detail-book-button {
+    background-color: dodgerblue;
+}
+
+.detail-book {
+    color: aliceblue;
+}
+
+.detail-user-button {
+    background-color: forestgreen;
+}
+
+.detail-user {
+    color: aliceblue;
+}
+
+.JenSON-button { /*Easter egg only for those who know F1*/
+    background-color: orange;
+    color: aliceblue;
+}
+
+.search-button {
+    background-color: dodgerblue;
+    color: aliceblue;
+}
+
+.add-button {
+    background-color: dodgerblue;
+    color: aliceblue;
+}
+
+.retry-button {
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.back-button {
+    background-color: darkorange;
+    color: aliceblue;
+}
+
+.logout-button {
+    background-color: crimson;
+}
+
+.logout {
+    color: aliceblue;
+}
+
+.login-button {
+    background-color: forestgreen;
+    color: aliceblue;
+}
+
+.home-button {
+    background-color: limegreen;
+    color: aliceblue;
+}
+
+input {
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: aliceblue;
+    height: 5%;
+    font-family: Calibri;
+}
+
+input:focus {
+    border: 2px solid green;
+    border-radius: 4px;
+    background-color: aliceblue;
+    height: 5%;
+    font-family: Calibri;
+}

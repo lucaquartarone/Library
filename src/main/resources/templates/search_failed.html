@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Book not found</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1>
@@ -10,7 +11,7 @@
     </h1>
 
     <form th:action="@{/books/find_book}">
-        <button>
+        <button class="retry-button">
             Try again
         </button>
     </form>

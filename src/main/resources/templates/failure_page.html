@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Failed</title>
+    <title>Failed action</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1>
@@ -14,12 +15,12 @@
     </h3>
 
     <form th:action="@{/user/sign_in}">
-        <button>
+        <button class="add-button">
             Create user
         </button>
     </form>
     <form th:action="@{/user/library_login}">
-        <button>
+        <button class="retry-button">
             Try again
         </button>
     </form>

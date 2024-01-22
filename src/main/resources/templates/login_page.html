@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign in User</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" />
 </head>
 <body>
     <h1>
@@ -24,10 +25,10 @@
 
         <br>
 
-        <button type="submit">Login</button>
+        <button type="submit" class="login-button">Login</button>
     </form>
     <form th:action="@{/user/sign_in}">
-        <button>
+        <button class="add-button">
             Create user
         </button>
     </form>
