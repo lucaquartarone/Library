@@ -63,9 +63,6 @@ public class BookController {
         BookRepository bookRepository = new BookRepository();
 
         bookRepository.setBooksList(books);
-
-        System.out.println("Book controller " + books.get(0).getTitle());
-
         model.addAttribute("bookRepository", bookRepository);
         model.addAttribute("books", books);
 

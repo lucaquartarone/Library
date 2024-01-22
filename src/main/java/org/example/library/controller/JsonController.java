@@ -21,9 +21,6 @@ public class JsonController {
 
     @PostMapping("/book_by_title")
     public List<Book> findByTitleJson(BookRepository bookRepository) {
-        //System.out.println("JSON Controller " + bookRepository.ge);
-
-        System.out.println(bookRepository.getBooksList());
         return bookRepository.getBooksList();
     }
 }
