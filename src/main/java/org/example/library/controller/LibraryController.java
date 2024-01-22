@@ -20,8 +20,9 @@ public class LibraryController {
     }
 
     @GetMapping("/home")
-    public String goHomePage(Model model) {
+    public String goHomePage(User user, Model model) {
         model.addAttribute("books", bookDao.findAll());
+        model.addAttribute("user", user);
 
         return "home_page";
     }

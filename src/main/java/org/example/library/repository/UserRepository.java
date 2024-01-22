@@ -5,13 +5,13 @@ import org.example.library.model.User;
 import java.util.List;
 
 public class UserRepository {
-    private List<User> usersList;
+    private User user;
 
-    public List<User> getUsersList() {
-        return usersList;
+    public User getUser() {
+        return user;
     }
 
-    public void setUsersList(List<User> usersList) {
-        this.usersList = usersList;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

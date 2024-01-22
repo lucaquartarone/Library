@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Account</title>
+</head>
+<body>
+    <h1>My account</h1>
+
+    <p th:text="'First name: ' + ${user.firstName}"></p>
+    <p th:text="'Last name: ' + ${user.lastName}"></p>
+    <p th:text="'Username: ' + ${user.username}"></p>
+    <p th:text="'ID: ' + ${user.id}"></p>
+
+    <button onclick="history.back()">
+        Go back
+    </button>
+</body>
+</html>

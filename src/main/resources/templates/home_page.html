@@ -9,15 +9,25 @@
         Home Page
     </h1>
 
+    <button>
+        <a th:href="@{/user/detail}">
+            My account
+        </a>
+    </button>
+
+    <br>
+
+    <h2>
+        List of books
+    </h2>
+
     <form th:action="@{/books/new_book}">
         <button>
             Add new book
         </button>
     </form>
 
-    <h2>
-        List of books
-    </h2>
+    <br>
 
     <table>
         <tr>
@@ -63,9 +73,9 @@
 
     <br>
 
-    <h2>
+    <h3>
         Research section
-    </h2>
+    </h3>
 
     <br>
 
