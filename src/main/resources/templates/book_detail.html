@@ -8,7 +8,7 @@
     <h1 th:text="${book.title}"></h1>
 
     <p th:text="'Author:' + ' ' + ${book.author}"></p>
-    <p th:text="'Price:' + ' ' + ${book.price}">€</p>
+    <p th:text="'Price:' + ' ' + ${book.price} + ' €'"></p>
     <p th:text="'ID:' + ' ' + ${book.id}"></p>
 
     <button onclick="history.back()">

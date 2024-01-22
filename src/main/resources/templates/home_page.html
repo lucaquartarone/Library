@@ -42,7 +42,7 @@
             <td th:text="${book.title}"></td>
             <td th:text="${book.author}"></td>
             <td th:text="${book.yearOfPublish}"></td>
-            <td th:text="${book.price}">€</td>
+            <td th:text="${book.price} + ' €'"></td>
             <td>
                 <button>
                     <a th:href="@{'/books/detail/' + ${book.id}}">
