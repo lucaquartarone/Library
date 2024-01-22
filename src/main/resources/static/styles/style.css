@@ -27,10 +27,13 @@ h3 {
 td {
     color: dimgrey;
     font-family: Calibri;
+    padding: 15px;
 }
 
 th {
     font-family: Calibri;
+    text-align: left;
+    padding: 15px;
 }
 
 .book-id {
