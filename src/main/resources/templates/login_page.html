@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in User</title>
+</head>
+<body>
+    <h1>
+        Login with your account
+    </h1>
+
+    <form th:action="@{/user/user_registered}" th:object="${user}" method="post">
+        <label>
+            <input type="text" th:field="*{username}" placeholder="Username" />
+            <p th:if="${#fields.hasErrors('username')}" errors="*{username}">Need at least 2 characters</p>
+        </label>
+
+        <br>
+
+        <label>
+            <input type="password" th:field="*{password}" placeholder="Password" />
+            <p th:if="${#fields.hasErrors('password')}" errors="*{password}">Need at least 8 characters</p>
+        </label>
+
+        <br>
+
+        <button type="submit">Login</button>
+    </form>
+    <form th:action="@{/user/sign_in}">
+        <button>
+            Create user
+        </button>
+    </form>
+</body>
+</html>

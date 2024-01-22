@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book detail</title>
+</head>
+<body>
+    <h1 th:text="${book.title}"></h1>
+
+    <p th:text="${book.author}"></p>
+    <p th:text="${book.price}"></p>
+    <p th:text="${book.id}"></p>
+
+    <button onclick="history.back()">
+        Go back
+    </button>
+</body>
+</html>

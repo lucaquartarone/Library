@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find book by title</title>
+</head>
+<body>
+    <form th:action="@{/books/book_found}" th:object="${book}" method="post">
+        <label>
+            <input type="text" th:field="*{title}" placeholder="Title" />
+
+            <p th:if="${#fields.hasErrors('title')}" errors="*{title}">
+                Need at least 2 characters
+            </p>
+        </label>
+
+        <button type="submit">
+            Find book
+        </button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+</head>
+<body>
+    <h1>
+        Home Page
+    </h1>
+
+    <form th:action="@{/books/new_book}">
+        <button>
+            Add new book
+        </button>
+    </form>
+
+    <h2>
+        List of books
+    </h2>
+
+    <table>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Year of publish
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+        <tr th:each="book : ${books}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.author}"></td>
+            <td th:text="${book.yearOfPublish}"></td>
+            <td th:text="${book.price}">€</td>
+            <td>
+                <button>
+                    <a th:href="@{'/books/detail/' + ${book.id}}">
+                        Book detail
+                    </a>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form th:action="@{/json/all_books}">
+        <button>
+            Watch books in JSON format
+        </button>
+    </form>
+
+    <br>
+
+    <h2>
+        Research section
+    </h2>
+
+    <br>
+
+    <form th:action="@{/books/find_book}">
+        <button>
+            Search a book
+        </button>
+    </form>
+</body>
+</html>

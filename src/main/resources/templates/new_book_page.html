@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Book</title>
+</head>
+<body>
+    <h1>
+        Insert new book data
+    </h1>
+
+    <form th:action="@{/books/book_added}" th:object="${book}" method="post">
+        <label>
+            <input type="text" th:field="*{title}" placeholder="Title" />
+            <p th:if="${#fields.hasErrors('title')}" errors="*{title}">Need at least 2 characters</p>
+        </label>
+
+        <br>
+
+        <label>
+            <input type="text" th:field="*{author}" placeholder="Author" />
+            <p th:if="${#fields.hasErrors('author')}" errors="*{author}">Need at least 2 characters</p>
+        </label>
+
+        <br>
+
+        <label>
+            <input type="number" th:field="*{yearOfPublish}" placeholder="Year of publish" />
+            <p th:if="${#fields.hasErrors('yearOfPublish')}" errors="*{yearOfPublish}">Needs to be at least 0</p>
+        </label>
+
+        <br>
+
+        <label>
+            <input type="number" th:field="*{price}" placeholder="Price" />
+            <p th:if="${#fields.hasErrors('price')}" errors="*{price}">Needs to be at least 1</p>
+        </label>
+
+        <br>
+
+        <button type="submit">Add book</button>
+    </form>
+</body>
+</html>

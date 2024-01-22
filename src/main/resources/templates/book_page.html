@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+</head>
+<body>
+  <h1>
+      Book found!
+  </h1>
+
+  <table>
+      <tr>
+          <th>
+              ID
+          </th>
+          <th>
+              Title
+          </th>
+          <th>
+              Author
+          </th>
+          <th>
+              Year of publish
+          </th>
+          <th>
+              Price
+          </th>
+      </tr>
+      <tr th:each="book : ${books}">
+          <td th:text="${book.id}"></td>
+          <td th:text="${book.title}"></td>
+          <td th:text="${book.author}"></td>
+          <td th:text="${book.yearOfPublish}"></td>
+          <td th:text="${book.price}"></td>
+      </tr>
+  </table>
+
+    <br>
+
+    <form th:action="@{/library/home}">
+        <button>
+            Go to home page
+        </button>
+    </form>
+
+    <br>
+
+    <form th:action="@{/json/book_by_title}" th:object="${bookRepository}" method="post">
+        <input type="hidden" th:field="*{booksList}">
+
+        <button type="submit">
+            Watch JSON format
+        </button>
+    </form>
+</body>
+</html>
