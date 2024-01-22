@@ -7,6 +7,12 @@
 <body>
     <h1>My account</h1>
 
+    <button>
+        <a th:href="@{/user/logout}">
+            Log out
+        </a>
+    </button>
+
     <p th:text="'First name: ' + ${user.firstName}"></p>
     <p th:text="'Last name: ' + ${user.lastName}"></p>
     <p th:text="'Username: ' + ${user.username}"></p>

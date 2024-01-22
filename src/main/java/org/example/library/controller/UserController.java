@@ -71,4 +71,11 @@ public class UserController {
 
         return modelAndView;
     }
+
+    @RequestMapping("/logout")
+    public String logoutUser(HttpSession httpSession) {
+        httpSession.setAttribute("user", null);
+
+        return "redirect:/user/library_login";
+    }
 }

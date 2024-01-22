@@ -80,4 +80,11 @@ public class BookController {
 
         return modelAndView;
     }
+
+    @RequestMapping("/delete/{bookId}")
+    public String deleteBook(@PathVariable("bookId") Long id) {
+        bookDao.deleteById(id);
+
+        return "redirect:/library/success";
+    }
 }
